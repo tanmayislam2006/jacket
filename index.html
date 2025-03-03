@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jacket</title>
+        <!-- google font  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+    
+        <!-- tailwind and daisyUi lin -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <!-- tailwind script -->
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            clifford: '#da373d',
+                            primary: '#ECA600',
+                            'primary-bg': '#F8BF34',
+                            'header-bg': '#FFF9F4',
+                            'footer-bg': '#0',
+                            'bordercolor': '#E9E9E9',
+    
+                        },
+                        fontFamily: {
+                            primary: ["Poppins", " sans-serif"],
+                        },
+                        backgroundImage: {
+                            'bg': "url('')",
+    
+                        },
+                    }
+                }
+            }
+        </script>
+    </head>
+<body id="body" class="font-primary max-w-7xl">
+    <header class="max-w-6xl mx-auto">
+        <nav class="flex justify-around my-10">
+            <!-- logo and text  -->
+             <div class=""><h3 class="text-lg font-bold text-primary">Ridgeline</h3></div>
+             <!-- navigation -->
+              <div class="">
+                <ul class="list-none flex gap-4 ">
+                    <li class="font-medium text-sm"><a class="no-underline" href="">Home</a></li>
+                    <li class="font-medium text-sm"><a class="no-underline" href="">About</a></li>
+                    <li class="font-medium text-sm"><a class="no-underline" href="">Contact</a></li>
+                </ul>
+              </div>
+              <div class="flex ">
+                <button class="font-medium mx-3">Sign Up</button>
+                <button class="font-medium rounded-lg px-2 py-1 bg-primary mx-3 ">Login</button>
+                <div id="cart-button" class="flex items-center ml-10 cursor-pointer">
+                      <div class="indicator">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /> </svg>
+                        <span class="badge badge-sm indicator-item" id="total-add">0</span>
+              </div>
+        </nav>
+    </header>
+    <section class="max-w-6xl mx-auto flex gap-3 my-3">
+        <!-- image -->
+         <div class="rounded lg w-3/5"><img id="product-image" class="w-full" src="./assets/yellow.png " alt=""></div>
+         <!-- text content  -->
+         <div class="">
+            <!-- heading  -->
+             <h1 class="text-3xl font-bold mt-6">Outdoor Jacket</h1>
+             <p class="max-w-md mt-6">A colorful, water-resistant, insulated jacket that is constructed with eco-friendly and recycled materials.</p>
+             <p class="font-bold text-3xl mt-16">$<span id="product-price">201</span></p>
+             <!-- color button  -->
+              <p class="my-4">Color</p>
+              <div class="flex items-center mt-1 space-x-2">
+                <button class="w-8 h-8 rounded-full bg-yellow-400 border-2 border-gray-300 ring-button"
+                  id="yellow-color"></button>
+                <button class="w-8 h-8 rounded-full bg-purple-400 border-2 border-gray-300 ring-button"
+                  id="purple-color"></button>
+                <button class="w-8 h-8 rounded-full bg-teal-500 border-2 border-gray-300 ring-button"
+                  id="teal-color"></button>
+                <button class="w-8 h-8 rounded-full bg-cyan-500 border-2 border-gray-300 ring-button"
+                  id="cyan-color"></button>
+                <button class="w-8 h-8 rounded-full bg-gray-700 border-2 border-gray-300 ring-button"
+                  id="gray-color"></button>
+                  <button class="w-8 h-8 rounded-full bg-violet-600 border-2 border-gray-300 ring-button" id="violet-color"></button>
+              </div>
+              <p class="my-3">Size</p>
+              <div class="mt-2">
+                <span class="text-sm font-semibold text-gray-700">Wrist Size</span>
+                <div class="grid grid-cols-4 gap-2 mt-2">
+                  <button class="px-2 py-2 border border-gray-300 rounded-lg text-sm size-button hover:bg-gray-100"
+                    id="size-S">
+                    S $69
+                  </button>
+                  <button class="px-2 py-2 border border-gray-300 rounded-lg text-sm size-button hover:bg-gray-100"
+                    id="size-M">
+                    M $79
+                  </button>
+                  <button class="px-2 py-2 border border-gray-300 rounded-lg text-sm size-button hover:bg-gray-100"
+                    id="size-L">
+                    L $89
+                  </button>
+                  <button class="px-2 py-2 border border-gray-300 rounded-lg text-sm size-button hover:bg-gray-100"
+                    id="size-XL">
+                    XL $99
+                  </button>
+                </div>
+              </div>
+              <div class="mt-6">
+                <button id="add-to-bag" class="bg-primary-bg px-4 py-3 font-bold rounded-2xl ">Add to bag</button>
+              </div>
+        
+         </div>
+
+    </section>
+    <!-- succesfully added  -->
+    <div id="alert-succes" class="hidden fixed inset-0 bg-black bg-opacity-40 flex justify-center items-center">
+      <div class="py-8 px-4 bg-white rounded-lg shadow-lg flex justify-center flex-col items-center">
+        <h3 id="added-itmes" class="text-xl font-bold">You have successfully added <span id="itmes-color"></span>jacket</h3>
+        <button id="continue-shoping" class="mx-6 my-6 px-3 py-2 rounded-lg font-bold bg-primary">Continue shoping</button>
+      </div>
+     </div>
+         <!-- succesfully added  -->
+    <div id="added-total" class=" hidden z-10 fixed inset-0 bg-black bg-opacity-40 flex justify-end ">
+      <div class="py-8 px-4 bg-white rounded-lg shadow-lg flex justify-center flex-col items-center">
+        <h3 id="added-itmes" class="text-xl font-bold">You have successfully added <span id="itmes-color"></span>jacket</h3>
+        <button id="clear-all" class="mx-6 my-6 px-3 py-2 rounded-lg font-bold bg-primary">Continue shoping</button>
+      </div>
+     </div>
+    <script src="./js-file/script.js"></script>
+    <script src="./js-file/utilites.js"></script>
+</body>
+</html>
