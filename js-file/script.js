@@ -59,10 +59,10 @@ document.getElementById("continue-shoping")
 const cartButton = document.getElementById("cart-button");
 cartButton.addEventListener("click", function (event) {
     const addedChart = document.getElementById("added-total");
-    addedChart.classList.remove("hidden");
+    addedChart.classList.remove("-translate-x-full");
 })
 document.getElementById("clear-all")
     .addEventListener("click", function () {
         const addedChart = document.getElementById("added-total");
-        addedChart.classList.add("hidden");
+        addedChart.classList.add("-translate-x-full");
     })
